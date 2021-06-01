@@ -1,0 +1,85 @@
+:root {
+    --colourSchemew: #ffffff;
+    --colourSchemeb: #1A1A1D;
+    --colourSchemey: #FFE8A3;
+    --colourSchemey2: #EACC37;
+    --colourSchemer: #C82736 ;
+    --colourSchemebl: #2F516A;
+}
+
+body{
+    background-color: var(--colourSchemey);
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+p, h1, h2, h3, h4, label{
+    color: var(--colourSchemebl);
+    font-family: 'manrope', sans-serif;
+}
+
+input, textarea{
+    margin-bottom: 10px;
+}
+
+nav{
+    margin: 5px 0;
+    max-height: 70px;
+    width: 100%;
+    text-align: center;
+}
+
+nav img{
+    max-height: 70px;
+}
+
+#ad{
+    margin-top: 15px;
+}
+
+#ad img{
+    width: 100%;
+    padding-bottom: 30px;
+    border: 3px solid var(--colourSchemey2);
+}
+
+#contactus{
+    margin: 30px 0 60px 0;
+}
+
+#application p{
+    margin: 1px 0;
+    font-weight: 600;
+}
+
+#applicationForm{
+    position: relative;
+}
+
+button{
+    margin-top: 20px;
+    padding: 3px 10px;
+    border: 1px solid var(--colourSchemey2);
+    color: var(--colourSchemew);
+    background-color: var(--colourSchemer);
+    position: absolute;
+    right: 0;
+}
+
+@media(max-width: 400px){
+    nav img{
+        max-height: 60px;
+    }
+
+    #ad{
+        text-align: center;
+    }
+
+    #ad img{
+        width: 70%;
+        padding-bottom: 30px;
+        border: 3px solid var(--colourSchemey2);
+    }
+}

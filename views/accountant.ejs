@@ -1,0 +1,49 @@
+<%-include("partials/header")%>
+<%-include("partials/navbar")%>
+
+<div class="container">
+    <div class="row d-flex flex-row justify-content-center">
+        <div class="col-10">
+            <h2>APPLICATION FOR - ACCOUNTANT</h2>
+            <p>Read each one of the job descriptions and show in the accompanying textbox you can meet it. Include past experience, trainings, certifications, personal qualities etc.</p>
+            <p>You are required to bring any supporting documents referred to during the interview session</p>
+        </div>
+        <form class="col-10" id="applicationform" action="/application" method="POST">
+            <label class="col-12" for="fname">First Name</label>
+            <input id="fname" name="questions[fname]" type="text" required>
+            <label class="col-12" for="lname">Last Name</label>
+            <input id="lname" name="questions[lname]" type="text" required>
+            <label class="col-12" for="lname">Phone Number</label>
+            <input id="lname" name="questions[phone]" type="text" required>
+            <label class="col-12" for="lname">Email</label>
+            <input id="lname" name="questions[email]" type="email" required>
+            <label class="col-12" for="q1">Analyse Accounts and business plans</label>
+            <textarea class="col-12" id="q1" maxLength = "900" name="questions[q1]" rows="4" cols="50" required></textarea>    
+            <label for="q2">Compile, present and execute business plans, commentaries and financial statements employing the use of relevant accounting software</label>
+            <textarea class="col-12" id="q2" maxLength = "900" name="questions[q2]" rows="4" cols="50" required></textarea>    
+            <label for="q3">Prepare inventory, asset, and liability reports</label>
+            <textarea class="col-12" id="q3" maxLength = "900" name="questions[q3]" rows="4" cols="50" required></textarea>    
+            <label for="q4">Administer payrolls and control income and expenditure</label>
+            <textarea class="col-12" id="q4" maxLength = "900" name="questions[q4]" rows="4" cols="50" required></textarea>    
+            <label for="q5">Audit financial transactions and documents</label>
+            <textarea class="col-12" id="q5" maxLength = "900" name="questions[q5]" rows="4" cols="50" required></textarea>    
+            <label for="q6">Provide tax planning services with reference to current legislation</label>
+            <textarea class="col-12" id="q6" maxLength = "900" name="questions[q6]" rows="4" cols="50" required></textarea>    
+            <label for="q7">Manage Colleagues, workload and deadlines</label>
+            <textarea class="col-12" id="q7" maxLength = "900" name="questions[q7]" rows="4" cols="50" required></textarea>    
+            <label for="q8">Provide other relevant support as required by management [Optional]</label>
+            <textarea placeholder="Write any additional information you think we should know here [Optional]" class="col-12" id="q8" maxLength = "900" name="questions[q8]" rows="4" cols="50"></textarea> 
+            
+            <label for="cv">Attach CV here </label>
+            <input type="file" class="form-control-file" id="cv" name="cv" accept=".doc,.docx,.pdf,.txt" required>
+            <p>Ensure CV File name is your name</p>
+            <br>
+            <button class="mr-4">Submit</button>
+            <br>
+            <br>
+            <br>
+        </form>
+    </div>
+</div>
+
+<%-include("partials/footer")%>

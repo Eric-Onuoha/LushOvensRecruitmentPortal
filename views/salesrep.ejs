@@ -1,0 +1,48 @@
+<%-include("partials/header")%>
+<%-include("partials/navbar")%>
+
+<div class="container">
+    <div class="row d-flex flex-row justify-content-center">
+        <div class="col-10">
+            <h2>APPLICATION FOR - ACCOUNTANT</h2>
+            <p>Read each one of the job descriptions and show in the accompanying textbox you can meet it. Include past experience, trainings, certifications, personal qualities etc.</p>
+            <p>You are required to bring any supporting documents referred to during the interview session</p>
+        </div>
+        <form class="col-10" id="applicationform" action="/application" method="POST" enctype="multipart/form-data">
+            <label class="col-12" for="fname">First Name</label>
+            <input id="fname" name="questions[fname]" type="text" required>
+            <label class="col-12" for="lname">Last Name</label>
+            <input id="lname" name="questions[lname]" type="text" required>
+            <label class="col-12" for="lname">Phone Number</label>
+            <input id="lname" name="questions[phone]" type="number" required>
+            <label class="col-12" for="lname">Email</label>
+            <input id="lname" name="questions[email]" type="email" required>
+            <label class="col-12" for="q1">Liase with delivery agents to ensure documentation, logistical assistance and sale of baked goods going out for delivery is provided</label>
+            <textarea class="col-12" id="q1" maxLength = "900" name="questions[1]" rows="4" cols="50" required></textarea>    
+            <label for="q2">Provide direct-to-customer sale of baked goods and any other items sold by the company</label>
+            <textarea class="col-12" id="q2" maxLength = "900" name="questions[2]" rows="4" cols="50" required></textarea>    
+            <label for="q3">Provide detailed reports of sales that match transaction value in cash and other payment methods</label>
+            <textarea class="col-12" id="q3" maxLength = "900" name="questions[3]" rows="4" cols="50" required></textarea>    
+            <label for="q4">Provide customers with friendly service and accurate answers to questions about products</label>
+            <textarea class="col-12" id="q4" maxLength = "900" name="questions[4]" rows="4" cols="50" required></textarea>    
+            <label for="q5">Elevate problems and suggestion on customer interfacing to management</label>
+            <textarea class="col-12" id="q5" maxLength = "900" name="questions[5]" rows="4" cols="50" required></textarea>    
+            <label for="q6">Collaborate with colleages in accounting and production to ensure smooth running of the bakery</label>
+            <textarea class="col-12" id="q6" maxLength = "900" name="questions[6]" rows="4" cols="50" required></textarea>    
+            <label for="q8">Provide other relevant support as required by management [Optional]</label>
+            <textarea placeholder="Write any additional information you think we should know here [Optional]" class="col-12" id="q8" maxLength = "900" name="questions[8]" rows="4" cols="50"></textarea> 
+            
+            <label for="cv">Attach CV here [Optional]</label>
+            <input type="file" class="form-control-file" id="cv" name="cv" accept=".doc,.docx,.pdf,.txt">
+            <p>Ensure CV File name is your name</p>
+            <p>Document and pdf only</p>
+            <br>
+            <button class="mr-4">Submit</button>
+            <br>
+            <br>
+            <br>
+        </form>
+    </div>
+</div>
+
+<%-include("partials/footer")%>
