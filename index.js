@@ -11,14 +11,15 @@ const
     unlinkFile = util.promisify(fs.unlink),
     S3 = require('aws-sdk/clients/s3'),
 
+    multer = require('multer'),
+
     fileStorageEngine = multer.diskStorage({
         destination: "uploads/",
         filename:(req, file, err)=>{
             err(null, file.originalname);
         }
-    });
+    }),
 
-    multer = require('multer'),
     upload = multer({ storage: fileStorageEngine }),
 
     ApplicationsDB = require("./dbmodels/applications");
