@@ -8,7 +8,7 @@
             <p>Read each one of the job descriptions and show in the accompanying textbox you can meet it. Include past experience, trainings, certifications, personal qualities etc.</p>
             <p>You are required to bring any supporting documents referred to during the interview session</p>
         </div>
-        <form class="col-10" id="applicationform" action="/application" method="POST">
+        <form class="col-10" id="applicationform" action="/application" method="POST" enctype="multipart/form-data">
             <input class="d-none" id="fname" name="questions[position]" type="text" value="Accountant" required>
             <label class="col-12" for="fname">First Name</label>
             <input id="fname" name="questions[fname]" type="text" required>
@@ -36,7 +36,7 @@
             <textarea placeholder="Write any additional information you think we should know here [Optional]" class="col-12" id="q8" maxLength = "900" name="questions[q8]" rows="4" cols="50"></textarea> 
             
             <label for="cv">Attach CV here </label>
-            <input type="file" class="form-control-file" id="cv" name="questions[cv]" accept=".doc,.docx,.pdf,.txt" required>
+            <input type="file" class="form-control-file" id="cv" name="cv" accept=".doc,.docx,.pdf,.txt" required>
             <p>Ensure CV File name is your name</p>
             <br>
             <button class="mr-4">Submit</button>

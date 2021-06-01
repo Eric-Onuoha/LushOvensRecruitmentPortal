@@ -13,8 +13,7 @@ const newsletterSchema = new mongoose.Schema({
     q5: String,
     q6: String,
     q7: String,
-    q8: String,
-    cv: String
+    q8: String
 });
 
 ApplicationsDB = mongoose.model("applications", newsletterSchema);
