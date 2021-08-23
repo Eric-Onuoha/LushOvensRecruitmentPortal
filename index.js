@@ -47,17 +47,20 @@ const
 
     app.get("/application", (req,res)=>{
         const job = (req.query.job);
-        if(job == "Baker"){
-            res.render("baker");
-        }else if (job == "Accountant"){
+        // if(job == "Baker"){
+        //     res.render("baker");
+        // }else if (job == "Accountant"){
+        //     res.render("accountant");
+        // // } else if ( job == "Sales Representative"){
+        // //     res.render("salesrep");
+        // } else if (job == "Bakery Assistant") {
+        //     res.render("bakeryassistant");
+        if(job == "Accountant"){
             res.render("accountant");
-        } else if ( job == "Sales Representative"){
-            res.render("salesrep");
-        } else if (job == "Bakery Assistant") {
-            res.render("bakeryassistant");
         } else {
-            console.log("here");
-            res.redirect("/");
+            // console.log("here");
+            // res.redirect("/");
+            res.render("accountant");
         }
     });
 
@@ -85,6 +88,14 @@ const
     app.listen(process.env.PORT || "3000", process.env.IP || "0.0.0.0", (req, res)=>{
         console.log("Lush Server Running");
     });
+
+    function isLoggedIn(req, res, next){
+        if (req.isAuthenticated()){
+            return next();
+        }else{
+            res.redirect("/login");//should find a way to send people to the thing the clicked on after logging in
+        }
+    }
 
     function uploadFile(file) {
         const fileStream = fs.createReadStream(file.path)
