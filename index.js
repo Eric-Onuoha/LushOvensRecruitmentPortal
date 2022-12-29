@@ -47,20 +47,18 @@ const
 
     app.get("/application", (req,res)=>{
         const job = (req.query.job);
-        // if(job == "Baker"){
-        //     res.render("baker");
-        // }else if (job == "Accountant"){
-        //     res.render("accountant");
-        // // } else if ( job == "Sales Representative"){
-        // //     res.render("salesrep");
-        // } else if (job == "Bakery Assistant") {
-        //     res.render("bakeryassistant");
-        if(job == "Accountant"){
+        if(job == "Baker"){
+            res.render("baker");
+        } else if (job == "Accountant"){
             res.render("accountant");
+        } else if ( job == "Sales Representative"){
+            res.render("salesrep");
+        } else if (job == "Bakery Assistant") {
+            res.render("bakeryassistant");
         } else {
-            // console.log("here");
-            // res.redirect("/");
-            res.render("accountant");
+            console.log("here");
+            res.redirect("/");
+            // res.render("accountant");
         }
     });
 
